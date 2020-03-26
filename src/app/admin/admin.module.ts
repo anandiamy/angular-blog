@@ -7,14 +7,16 @@ import { ArticleComponent } from './article/article.component';
 import { AdminComponent } from './admin/admin.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
 import {FormsModule} from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
   declarations: [DashboardComponent, ArticleComponent, AdminComponent, ArticleEditComponent],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        FormsModule,
+        NgxPaginationModule
+    ]
 })
 export class AdminModule { }

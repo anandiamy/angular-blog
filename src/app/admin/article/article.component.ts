@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PostService} from '../../services/post.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Posts} from '../../models/posts';
@@ -14,6 +14,10 @@ export class ArticleComponent implements OnInit {
   search: string;
   author: string;
   sort: string;
+  p: number;
+
+  @Output() pageChange: EventEmitter<number>;
+  @Output() pageBoundsCorrection: EventEmitter<number>;
 
   constructor(private postService: PostService, private router: Router) {
   }
