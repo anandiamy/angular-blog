@@ -13,6 +13,8 @@ export class ArticleEditComponent implements OnInit {
   id: number;
   title: string;
   body: string;
+  author: string;
+  createdAt: Date;
 
   constructor(private postService: PostService, private activatedRoute: ActivatedRoute, private router: Router) {
   }
@@ -31,7 +33,9 @@ export class ArticleEditComponent implements OnInit {
     const posts: Posts = {
       id: this.id,
       title: this.title,
-      body: this.body
+      body: this.body,
+      author: this.author,
+      createdAt: this.createdAt
     };
 
     this.postService.putArticle(id, posts).subscribe(data => console.log(data));

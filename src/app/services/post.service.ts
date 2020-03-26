@@ -65,4 +65,10 @@ export class PostService {
 
     return this.http.get<Posts>(url);
   }
+
+  filterAuthor(author: string) {
+    const url = this.baseUrl + '/posts?author=' + author;
+
+    return this.http.get<Posts[]>(url);
+  }
 }

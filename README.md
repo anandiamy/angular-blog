@@ -8,5 +8,5 @@ Minimum requirements:
 - Single article => OK
 - Article pagination (also in admin)
 - Article sort by created date (also in admin)
-- Article filter by author (also in admin)
-- Article search by keywords (also in admin)
+- Article filter by author (also in admin) => OK
+- Article search by keywords (also in admin) => OK

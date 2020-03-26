@@ -1,11 +1,23 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    <form ngNativeValidate (ngSubmit)="handleSearch()">
+    <form ngNativeValidate (ngSubmit)="handleSearch()" >
       <div class="form-group">
         <label for="search">Cari :</label>
         <input type="text" id="search" name="search" class="form-control" [(ngModel)]="search">
       </div>
       <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> Cari</button>
+    </form>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form ngNativeValidate (ngSubmit)="handleFilter()">
+      <div class="form-group">
+        <label for="author">Author :</label>
+        <input type="text" id="author" name="author" class="form-control" [(ngModel)]="author">
+      </div>
+      <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-filter"></i> Filter</button>
     </form>
   </div>
 </div>

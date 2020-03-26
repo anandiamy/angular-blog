@@ -12,6 +12,7 @@ export class ArticleComponent implements OnInit {
 
   postList: Posts[] = [];
   search: string;
+  author: string;
 
   constructor(private postService: PostService, private router: Router) {
   }
@@ -31,5 +32,9 @@ export class ArticleComponent implements OnInit {
 
   handleSearch() {
     this.postService.searchArticle(this.search).subscribe(data => this.postList = data);
+  }
+
+  handleFilter() {
+    this.postService.filterAuthor(this.author).subscribe(data => this.postList = data);
   }
 }
