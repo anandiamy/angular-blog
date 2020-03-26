@@ -1,0 +1,12 @@
+Minimum requirements:
+- Admin route => OK
+- Admin dashboard => OK
+- Admin article CRUD => OK
+- Login page => OK
+- Logout => OK
+- Article list => OK
+- Single article => OK
+- Article pagination (also in admin)
+- Article sort by created date (also in admin)
+- Article filter by author (also in admin)
+- Article search by keywords (also in admin)
