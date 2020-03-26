@@ -13,6 +13,7 @@ export class ArticleComponent implements OnInit {
   postList: Posts[] = [];
   search: string;
   author: string;
+  sort: string;
 
   constructor(private postService: PostService, private router: Router) {
   }
@@ -36,5 +37,10 @@ export class ArticleComponent implements OnInit {
 
   handleFilter() {
     this.postService.filterAuthor(this.author).subscribe(data => this.postList = data);
+  }
+
+  handleSort() {
+    console.log(this.sort)
+    this.postService.sortTanggal(this.sort).subscribe(data => this.postList = data);
   }
 }

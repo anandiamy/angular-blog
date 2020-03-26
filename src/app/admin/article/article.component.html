@@ -23,6 +23,22 @@
 </div>
 
 <div class="panel panel-default">
+  <div class="panel-body">
+    <form ngNativeValidate (ngSubmit)="handleSort()">
+      <div class="form-group">
+        <label for="sort">Urutkan Tanggal :</label>
+        <select [(ngModel)]="sort" class="form-control" name="sort" id="sort">
+          <option value=""> -- Pilih -- </option>
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-sort"></i> Urutkan</button>
+    </form>
+  </div>
+</div>
+
+<div class="panel panel-default">
   <div class="panel-heading">Artikel</div>
 
   <table class="table table-responsive table-striped">

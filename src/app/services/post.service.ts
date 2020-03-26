@@ -71,4 +71,10 @@ export class PostService {
 
     return this.http.get<Posts[]>(url);
   }
+
+  sortTanggal(sort: string) {
+    const url = this.baseUrl + '/posts?_sort=createdAt&_order=' + sort;
+    console.log(url);
+    return this.http.get<Posts[]>(url);
+  }
 }
