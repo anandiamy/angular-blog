@@ -1,0 +1,17 @@
+<div class="col-md-6">
+  <h1>Login</h1>
+
+  <form ngNativeValidate (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="username">Username :</label>
+      <input type="text" id="username" name="username" class="form-control" [(ngModel)]="username">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password :</label>
+      <input type="text" id="password" name="password" class="form-control" [(ngModel)]="password">
+    </div>
+
+    <button type="submit" class="btn btn-default">Login</button>
+  </form>
+</div>

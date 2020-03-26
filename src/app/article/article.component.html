@@ -1,0 +1,10 @@
+<h1>Daftar Artikel</h1>
+
+<div *ngFor="let post of postList">
+  <h3>
+    <a [routerLink]="['/article/', post.id]">
+      {{ post.title }}
+    </a>
+  </h3>
+  <p>{{ post.body }}</p>
+</div>

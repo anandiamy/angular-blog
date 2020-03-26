@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Edit Artikel</div>
+  <div class="panel-body">
+    <form ngNativeValidate (ngSubmit)="update(id)">
+      <div class="form-group">
+        <label for="title">Judul :</label>
+        <input type="text" id="title" name="title" class="form-control" [(ngModel)]="title">
+      </div>
+
+      <div class="form-group">
+        <label for="body">Isi :</label>
+        <textarea class="form-control" name="body" id="body" cols="30" rows="10" [(ngModel)]="body"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-default">Update</button>
+    </form>
+  </div>
+</div>

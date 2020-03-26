@@ -1,0 +1,47 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form ngNativeValidate (ngSubmit)="handleSearch()">
+      <div class="form-group">
+        <label for="search">Cari :</label>
+        <input type="text" id="search" name="search" class="form-control" [(ngModel)]="search">
+      </div>
+      <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> Cari</button>
+    </form>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Artikel</div>
+
+  <table class="table table-responsive table-striped">
+    <thead>
+    <tr>
+      <th class="text-center">Judul</th>
+      <th class="text-center">Isi</th>
+      <th class="text-center">Penulis</th>
+      <th class="text-center" nowrap>Tanggal</th>
+      <th class="text-center">Aksi</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngIf="!postList.length">
+      <td colspan="4" class="text-center">Loading Artikel ...</td>
+    </tr>
+    <tr *ngFor="let post of postList">
+      <td><a [routerLink]="['/admin/article/', post.id]">{{post.title}}</a></td>
+      <td>{{post.body}}</td>
+      <td>{{post.author}}</td>
+      <td>{{post.createdAt | date}}</td>
+      <td>
+        <a type="button" class="btn btn-success btn-sm" style="margin-bottom: 5px"
+           [routerLink]="['/admin/article', post.id, 'edit']"><i
+          class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a type="button" class="btn btn-danger btn-sm" (click)="delete(post.id)"><i
+          class="glyphicon glyphicon-trash"></i>
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
